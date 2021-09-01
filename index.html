@@ -61,15 +61,15 @@
     <div class="flex justify-center items-center px-4 py-1 sm:py-2 sm:px-8 md:justify-center md:space-x-10 xl:max-w-7xl mx-auto border-b-2 sm:border-b-0">
 
 
-    <nav class="flex space-x-1 justify-center md:flex lg:space-x-4 ">
+    <nav class="flex  justify-center md:flex space-x-3 lg:space-x-4 ">
         <div class=" my-auto">
-            <a href="https://antwebstudio.github.io/mrproperty-staging/" class="text-sm sm:text-lg font-bold text-red-500 ">
+            <a href="/" class="text-sm sm:text-lg font-bold text-red-500 ">
                 HOUSE </a>
         </div>
         <div class="my-2.5 py-3 border-r-2">
         </div>
         <div class="my-auto">
-            <a href="https://antwebstudio.github.io/mrproperty-staging/commercial-properties.html"  class="text-sm sm:text-lg font-normal text-gray-500">
+            <a href="/commercial-properties.html"  class="text-sm sm:text-lg font-normal text-gray-500">
                 COMMERCIAL PROPERTIES </a>
         </div>
     </nav>
@@ -108,7 +108,7 @@
                 <div class="py-4 lg:py-0 lg:w-1/3 lg:flex-none ">
                     <div class="max-w-xs mx-auto px-4 flex items-center lg:max-w-none lg:px-3 ">
                         <select
-                            class="block w-72  mt-1 text-base font-light bg-gray-100 border-1 border-gray-400 focus:border-red-500 focus:bg-white focus:ring-0 ">
+                            class="block w-full mt-1 text-base font-light bg-gray-100 border-1 border-gray-400 focus:border-red-500 focus:bg-white focus:ring-0 ">
                             <option hidden>Property Type</option>
                             <option class="text-base font-light">Wedding</option>
                             <option class="text-base font-light">Birthday</option>
@@ -119,7 +119,7 @@
                 <div class="py-2 lg:py-0 lg:w-1/3 lg:flex-none">
                     <div class="max-w-xs mx-auto px-4 flex items-center lg:max-w-none lg:px-3">
                         <select
-                            class="block w-full mt-1 text-base font-light bg-gray-100 border-1 border-gray-400 focus:border-red-500 focus:bg-white focus:ring-0">
+                            class="block  w-72  mt-1 text-base font-light bg-gray-100 border-1 border-gray-400 focus:border-red-500 focus:bg-white focus:ring-0">
                             <option hidden>Price From</option>
                             <option class="text-base font-light">Wedding</option>
                             <option class="text-base font-light">Birthday</option>
@@ -130,7 +130,7 @@
                 <div class="py-2 lg:py-0 lg:w-1/3 lg:flex-none">
                     <div class="max-w-xs mx-auto px-4 flex items-center lg:max-w-none lg:px-3">
                         <select
-                            class="block w-full mt-1 text-base font-light bg-gray-100 border-1 border-gray-400 focus:border-red-500 focus:bg-white focus:ring-0">
+                            class="block w-72 mt-1 text-base font-light bg-gray-100 border-1 border-gray-400 focus:border-red-500 focus:bg-white focus:ring-0">
                             <option hidden>Price To</option>
                             <option class="text-base font-light">Wedding</option>
                             <option class="text-base font-light">Birthday</option>
@@ -183,7 +183,7 @@
                 <div class="py-4 lg:py-0 lg:w-1/3 lg:flex-none ">
                     <div class="max-w-xs mx-auto px-4 flex items-center lg:max-w-none lg:px-3 ">
                         <select
-                            class="block w-72  mt-1 text-base font-light  bg-gray-100 border-1 border-gray-400 focus:border-red-500 focus:bg-white focus:ring-0 ">
+                            class="block w-full  mt-1 text-base font-light  bg-gray-100 border-1 border-gray-400 focus:border-red-500 focus:bg-white focus:ring-0 ">
                             <option hidden>Property Type</option>
                             <option class="text-base font-light">Wedding</option>
                             <option class="text-base font-light">Birthday</option>
@@ -194,7 +194,7 @@
                 <div class="py-2 lg:py-0 lg:w-1/3 lg:flex-none">
                     <div class="max-w-xs mx-auto px-4 flex items-center lg:max-w-none lg:px-3">
                         <select
-                            class="block w-full mt-1 text-base font-light bg-gray-100 border-1 border-gray-400 focus:border-red-500 focus:bg-white focus:ring-0">
+                            class="block w-72 mt-1 text-base font-light bg-gray-100 border-1 border-gray-400 focus:border-red-500 focus:bg-white focus:ring-0">
                             <option hidden>Price From</option>
                             <option class="text-base font-light">Wedding</option>
                             <option class="text-base font-light">Birthday</option>
@@ -205,7 +205,7 @@
                 <div class="py-2 lg:py-0 lg:w-1/3 lg:flex-none">
                     <div class="max-w-xs mx-auto px-4 flex items-center lg:max-w-none lg:px-3">
                         <select
-                            class="block w-full mt-1 text-base font-light bg-gray-100 border-1 border-gray-400 focus:border-red-500 focus:bg-white focus:ring-0">
+                            class="block w-72 mt-1 text-base font-light bg-gray-100 border-1 border-gray-400 focus:border-red-500 focus:bg-white focus:ring-0">
                             <option hidden>Price To</option>
                             <option class="text-base font-light">Wedding</option>
                             <option class="text-base font-light">Birthday</option>
@@ -389,7 +389,9 @@
     x-transition:enter-end="opacity-100"
     x-transition:leave="ease-in duration-200"
     x-transition:leave-start="opacity-100"
-    x-transition:leave-end="opacity-0" class=" fixed z-10 inset-0 overflow-y-auto" aria-labelledby="modal-title" role="dialog"
+    x-transition:leave-end="opacity-0" 
+    :class="{ 'fixed z-10 inset-0 overflow-y-auto' : isMobileSales , 'hidden' : !isMobileSales}" class="hidden"
+    aria-labelledby="modal-title" role="dialog"
         aria-modal="true">
         <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
             <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" aria-hidden="true"></div>
@@ -513,7 +515,8 @@
     x-transition:leave="ease-in duration-200"
     x-transition:leave-start="opacity-100"
     x-transition:leave-end="opacity-0"
-    class=" fixed z-10 inset-0 overflow-y-auto" aria-labelledby="modal-title" role="dialog"
+    :class="{ 'fixed z-10 inset-0 overflow-y-auto' : isMobileRent , 'hidden' : !isMobileRent}" class="hidden"
+    aria-labelledby="modal-title" role="dialog"
         aria-modal="true">
         <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
             <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" aria-hidden="true"></div>
@@ -672,10 +675,10 @@
         <ul role="list" class=" mx-4 sm:mx-10 lg:mx-0">
             <!-- Use this to for loop -->
             <li class="py-4 ">
-                <a href="https://antwebstudio.github.io/mrproperty-staging/property-details.html" class="grid grid-cols-5 gap-0 hover:bg-gray-50">
+                <a href="/property-details.html" class="grid grid-cols-5 gap-0 hover:bg-gray-50">
 
                     <div class="col-span-2 relative inline-block  ">
-                        <img class="object-cover h-full "
+                        <img class="object-cover h-36 md:h-64 w-full"
                             src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
                             alt="">
                             <!-- animation motion-safe:animate-bounce or animate-pulse  -->
@@ -693,7 +696,7 @@
                             <p class="text-md sm:text-xl font-semibold text-red-600">RM1500</p>
                         </div>
 
-                        <div class=" hidden sm:grid grid-cols-2 gap-0 mx-4 pr-20 lg:pr-52">
+                        <div class=" hidden sm:grid grid-cols-2 gap-0 mx-4 pr-20 lg:pr-48 mb-4">
                             <div class="  m-1 inline-flex items-end "> <img class="h-10 w-10"
                                     src="./assets/img/house-icon.png">
                                 <p class="mb-1 text-md text-gray-500">Houses</p>
@@ -721,8 +724,8 @@
                 <div class="grid grid-cols-5 gap-0">
 
                     <div class="col-span-2 relative inline-block  ">
-                        <img class="object-cover h-full "
-                            src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=750&q=80"
+                        <img class="object-cover h-36 md:h-64 w-full"
+                            src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
                             alt="">
                         <span
                             class=" motion-safe:animate-bounce absolute top-0 left-0 ml-2 sm:ml-4 mt-4 px-2 py-1 text-xs md:text-md lg:text-base font-semibold leading-none text-red-100 transform bg-red-600 ">For
@@ -738,7 +741,7 @@
                             <p class="text-md sm:text-xl font-semibold text-red-600">RM1500</p>
                         </div>
 
-                        <div class=" hidden sm:grid grid-cols-2 gap-0 mx-4 pr-20 lg:pr-52">
+                        <div class=" hidden sm:grid grid-cols-2 gap-0 mx-4 pr-20 lg:pr-48 mb-4">
                             <div class="  m-1 inline-flex items-end "> <img class="h-10 w-10"
                                     src="./assets/img/house-icon.png">
                                 <p class="mb-1 text-md text-gray-500">Houses</p>
@@ -750,6 +753,52 @@
                             <div class="  m-1 inline-flex items-end "> <img class="h-10 w-10"
                                     src="./assets/img/bedroom-icon.png">
                                 <p class="mb-1 text-md text-gray-500">4 Bedrooms</p>
+                            </div>
+                            <div class="  m-1 inline-flex items-end "> <img class="h-10 w-10"
+                                    src="./assets/img/bathroom-icon.png">
+                                <p class="mb-1 text-md text-gray-500">4 bathroom</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </li>
+ 
+            <li class="py-4 ">
+                <div class="grid grid-cols-5 gap-0">
+
+                    <div class="col-span-2 relative inline-block  ">
+                        <img class="object-cover h-36 md:h-64 w-full" 
+                            src="https://mrpropertysp.com/file/12f5ee90a1d52/WhatsApp%20Image%202021-08-17%20at%208.23.20%20PM%20(2)"
+                            alt="">
+                        <span
+                            class="animate-pulse  absolute top-0 left-0 ml-2 sm:ml-4 mt-4 px-2 py-1 text-xs md:text-md lg:text-base font-semibold leading-none text-red-100 transform bg-red-600 ">For
+                            Rent</span>
+                        </span>
+
+                    </div>
+                    <div class="col-span-3 ">
+                        <div class=" m-4">
+                            <p class="text-base sm:text-2xl font-semibold text-gray-900">STRATEGIC LOCATION Shop Lot ( 1st
+                                FL)
+                                Taman Tuanku Haminah</p>
+                            <p class="text-md sm:text-xl font-semibold text-red-600">RM1500</p>
+                        </div>
+
+                        <div class=" hidden sm:grid grid-cols-2 gap-0 mx-4 pr-20 lg:pr-48 mb-4">
+                            <div class="  m-1 inline-flex items-end "> <img class="h-10 w-10"
+                                    src="./assets/img/house-icon.png">
+                                <p class="mb-1 text-md text-gray-500">Houses</p>
+                            </div>
+                            <div class="  m-1 inline-flex items-end "> <img class="h-10 w-10"
+                                    src="./assets/img/size-icon.png">
+                                <p class="mb-1 text-md text-gray-500">2800sqft</p>
+                            </div>
+                            <div class="  m-1 inline-flex items-end "> <img class="h-10 w-10"
+                                    src="./assets/img/bedroom-icon.png">
+                                <p class="mb-1 text-md text-gray-500 ">4 Bedrooms</p>
                             </div>
                             <div class="  m-1 inline-flex items-end "> <img class="h-10 w-10"
                                     src="./assets/img/bathroom-icon.png">
@@ -783,7 +832,7 @@
                             <p class="text-md sm:text-xl font-semibold text-red-600">RM1500</p>
                         </div>
 
-                        <div class=" hidden sm:grid grid-cols-2 gap-0 mx-4 pr-20 lg:pr-52">
+                        <div class=" hidden sm:grid grid-cols-2 gap-0 mx-4 pr-20 lg:pr-48 mb-4">
                             <div class="  m-1 inline-flex items-end "> <img class="h-10 w-10"
                                     src="./assets/img/house-icon.png">
                                 <p class="mb-1 text-md text-gray-500">Houses</p>
@@ -811,7 +860,7 @@
                 <div class="grid grid-cols-5 gap-0">
 
                     <div class="col-span-2 relative inline-block  ">
-                        <img class="object-cover h-full "
+                        <img class="object-cover h-36 md:h-64 w-full"
                             src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
                             alt="">
                         <span
@@ -828,7 +877,7 @@
                             <p class="text-md sm:text-xl font-semibold text-red-600">RM1500</p>
                         </div>
 
-                        <div class=" hidden sm:grid grid-cols-2 gap-0 mx-4 pr-20 lg:pr-52">
+                        <div class=" hidden sm:grid grid-cols-2 gap-0 mx-4 pr-20 lg:pr-48 mb-4">
                             <div class="  m-1 inline-flex items-end "> <img class="h-10 w-10"
                                     src="./assets/img/house-icon.png">
                                 <p class="mb-1 text-md text-gray-500">Houses</p>
@@ -942,106 +991,111 @@
     <!-- Footer here -->
 <footer>
         <div class="bg-gray-200 mx-auto ">
-                <div
-                class="hidden sm:flex  justify-between items-center px-4 py-2 sm:px-1 md:justify-start md:space-x-10 sm:max-w-xs md:max-w-4xl  xl:max-w-5xl mx-auto border-b-2 pt-14">
-                <div class=" flex items-baseline justify-center flex-1 lg:w-0">
-                        <p
-                        class="text-base sm:text-2xl text-center mb-2 font-medium text-gray-900">
-                        CONTACT US            </p>
-                </div>
-
-        </div>
-                <div
-                        class=" hidden  sm:grid grid-cols-10 gap-1 justify-between items-center justify-items-center  px-4 py-2 sm:px-1 md:justify-start  sm:max-w-xs md:max-w-4xl  xl:max-w-5xl mx-auto border-b-2 border-gray-500">
-
-                        <div class=" hidden lg:block lg:col-span-2 ">
-                                <div class=" ">
-                                        <img class=" -mb-2 h-30 w-auto object-cover sm:h-96"
-                                                src="./assets/img/lengzai.png" alt="">
-                                </div>
-
+                <div class="flex  justify-between items-center px-4 py-2 sm:px-1 md:justify-start md:space-x-10 sm:max-w-xs md:max-w-4xl  xl:max-w-5xl mx-auto border-b-2 pt-14">
+                        <div class=" flex items-baseline justify-center flex-1 lg:w-0">
+                                <p class="text-2xl  sm:text-3xl text-center mb-2 font-medium text-gray-900">
+                                        CONTACT US </p>
                         </div>
-                        <div class=" col-span-5 lg:col-span-4">
-                                <div>
-                                        <div class=" flex justify-center mx-auto">
-                                                <img class=" h-16 object-contain w-auto sm:h-52"
-                                                        src="./assets/img/MrProperty.png" alt="">
 
-                                        </div>
-                                        <div class=" flex justify-center mx-auto">
+                </div>
+                <div
+                        class="flex flex-col md:flex-row  justify-around items-center justify-items-center  py-2 sm:px-1 sm:max-w-xs md:max-w-4xl  xl:max-w-6xl mx-auto border-b-2 border-gray-500">
+
+
+                        <div class="">
+                                <div class="grid grid-cols-6 border-b-2 border-gray-900 sm:border-b-0" >
+                                        <div class="col-span-3">
                                                 <div class=" ">
-                                                        <p
-                                                                class="text-base sm:text-1xl text-center -mt-7 font-extralight text-gray-900">
-                                                                Real Estate Negotiator </p>
-                                                        <p
-                                                                class="text-base sm:text-2xl text-center mb-2 font-semibold text-gray-900">
-                                                                ANSON TAI
-                                                        </p>
-                                                        <div
-                                                                class="flex text-center justify-center items-center space-x-6 my-10">
+                                                        <img class=" sm:-mb-2 h-30 w-auto object-cover  sm:h-96"
+                                                                src="./assets/img/lengzai.png" alt="">
+                                                </div>
+                                        </div>
+          
+                                        <div class="-ml-11 col-span-3 ">
+                                                <div class=" flex justify-center mx-auto">
+                                                        <img class=" h-36 object-contain w-auto sm:h-52"
+                                                                src="./assets/img/MrProperty.png" alt="">
+
+                                                </div>
+                                                <div class=" flex justify-center mx-auto ">
+                                                        <div class=" px-4 ">
+                                                                <p
+                                                                        class="text-base sm:text-1xl text-center -mt-7 font-light text-gray-900">
+                                                                        Real Estate Negotiator </p>
+                                                                <p
+                                                                        class="text-base sm:text-3xl text-center mb-2 font-semibold text-gray-900">
+                                                                        ANSON TAI
+                                                                </p>
+                                                                <div
+                                                                        class="flex text-center justify-center items-center space-x-5 sm:space-x-3 lg:space-x-8 my-5 sm:my-10">
 
 
-                                                                <a href="#" class="text-gray-400 hover:text-red-800">
-                                                                        <span class="sr-only">Facebook</span>
-                                                                        <svg id="Bold" class="h-10 w-10"
-                                                                                fill="currentColor"
-                                                                                enable-background="new 0 0 24 24"
-                                                                                height="512" viewBox="0 0 24 24"
-                                                                                width="512"
-                                                                                xmlns="http://www.w3.org/2000/svg">
-                                                                                <path
-                                                                                        d="m15.997 3.985h2.191v-3.816c-.378-.052-1.678-.169-3.192-.169-3.159 0-5.323 1.987-5.323 5.639v3.361h-3.486v4.266h3.486v10.734h4.274v-10.733h3.345l.531-4.266h-3.877v-2.939c.001-1.233.333-2.077 2.051-2.077z" />
-                                                                        </svg>
-                                                                </a>
-                                                                <a href="#" class="text-gray-400 hover:text-gray-500">
-                                                                        <span class="sr-only">Whatsapp</span>
-                                                                        <svg class="h-10 w-10" id="Bold"
-                                                                                fill="currentColor"
-                                                                                enable-background="new 0 0 24 24"
-                                                                                height="512" viewBox="0 0 24 24"
-                                                                                width="512"
-                                                                                xmlns="http://www.w3.org/2000/svg">
-                                                                                <path
-                                                                                        d="m17.507 14.307-.009.075c-2.199-1.096-2.429-1.242-2.713-.816-.197.295-.771.964-.944 1.162-.175.195-.349.21-.646.075-.3-.15-1.263-.465-2.403-1.485-.888-.795-1.484-1.77-1.66-2.07-.293-.506.32-.578.878-1.634.1-.21.049-.375-.025-.524-.075-.15-.672-1.62-.922-2.206-.24-.584-.487-.51-.672-.51-.576-.05-.997-.042-1.368.344-1.614 1.774-1.207 3.604.174 5.55 2.714 3.552 4.16 4.206 6.804 5.114.714.227 1.365.195 1.88.121.574-.091 1.767-.721 2.016-1.426.255-.705.255-1.29.18-1.425-.074-.135-.27-.21-.57-.345z" />
-                                                                                <path
-                                                                                        d="m20.52 3.449c-7.689-7.433-20.414-2.042-20.419 8.444 0 2.096.549 4.14 1.595 5.945l-1.696 6.162 6.335-1.652c7.905 4.27 17.661-1.4 17.665-10.449 0-3.176-1.24-6.165-3.495-8.411zm1.482 8.417c-.006 7.633-8.385 12.4-15.012 8.504l-.36-.214-3.75.975 1.005-3.645-.239-.375c-4.124-6.565.614-15.145 8.426-15.145 2.654 0 5.145 1.035 7.021 2.91 1.875 1.859 2.909 4.35 2.909 6.99z" />
-                                                                        </svg>
-                                                                </a>
+                                                                        <a href="#"
+                                                                                class="text-gray-400 hover:text-red-800">
+                                                                                <span class="sr-only">Facebook</span>
+                                                                                <svg id="Bold" class="h-6 sm:h-11 w-6 sm:w-11"
+                                                                                        fill="currentColor"
+                                                                                        enable-background="new 0 0 24 24"
+                                                                                        height="512" viewBox="0 0 24 24"
+                                                                                        width="512"
+                                                                                        xmlns="http://www.w3.org/2000/svg">
+                                                                                        <path
+                                                                                                d="m15.997 3.985h2.191v-3.816c-.378-.052-1.678-.169-3.192-.169-3.159 0-5.323 1.987-5.323 5.639v3.361h-3.486v4.266h3.486v10.734h4.274v-10.733h3.345l.531-4.266h-3.877v-2.939c.001-1.233.333-2.077 2.051-2.077z" />
+                                                                                </svg>
+                                                                        </a>
+                                                                        <a href="#"
+                                                                                class="text-gray-400 hover:text-red-800">
+                                                                                <span class="sr-only">Whatsapp</span>
+                                                                                <svg class=" h-6 sm:h-11 w-6 sm:w-11" id="Bold"
+                                                                                        fill="currentColor"
+                                                                                        enable-background="new 0 0 24 24"
+                                                                                        height="512" viewBox="0 0 24 24"
+                                                                                        width="512"
+                                                                                        xmlns="http://www.w3.org/2000/svg">
+                                                                                        <path
+                                                                                                d="m17.507 14.307-.009.075c-2.199-1.096-2.429-1.242-2.713-.816-.197.295-.771.964-.944 1.162-.175.195-.349.21-.646.075-.3-.15-1.263-.465-2.403-1.485-.888-.795-1.484-1.77-1.66-2.07-.293-.506.32-.578.878-1.634.1-.21.049-.375-.025-.524-.075-.15-.672-1.62-.922-2.206-.24-.584-.487-.51-.672-.51-.576-.05-.997-.042-1.368.344-1.614 1.774-1.207 3.604.174 5.55 2.714 3.552 4.16 4.206 6.804 5.114.714.227 1.365.195 1.88.121.574-.091 1.767-.721 2.016-1.426.255-.705.255-1.29.18-1.425-.074-.135-.27-.21-.57-.345z" />
+                                                                                        <path
+                                                                                                d="m20.52 3.449c-7.689-7.433-20.414-2.042-20.419 8.444 0 2.096.549 4.14 1.595 5.945l-1.696 6.162 6.335-1.652c7.905 4.27 17.661-1.4 17.665-10.449 0-3.176-1.24-6.165-3.495-8.411zm1.482 8.417c-.006 7.633-8.385 12.4-15.012 8.504l-.36-.214-3.75.975 1.005-3.645-.239-.375c-4.124-6.565.614-15.145 8.426-15.145 2.654 0 5.145 1.035 7.021 2.91 1.875 1.859 2.909 4.35 2.909 6.99z" />
+                                                                                </svg>
+                                                                        </a>
 
-                                                                <a href="#" class="text-gray-400 hover:text-gray-500">
-                                                                        <span class="sr-only">Mail</span>
-                                                                        <svg xmlns="http://www.w3.org/2000/svg"
-                                                                                class="h-12 w-12" fill="none"
-                                                                                viewBox="0 0 24 24"
-                                                                                stroke="currentColor">
-                                                                                <path stroke-linecap="round"
-                                                                                        stroke-linejoin="round"
-                                                                                        stroke-width="2"
-                                                                                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                                                                        </svg>
-                                                                </a>
+                                                                        <a href="#"
+                                                                                class="text-gray-400 hover:text-red-800">
+                                                                                <span class="sr-only">Mail</span>
+                                                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                                                        class="h-7 sm:h-12 w-7 sm:w-12" fill="none"
+                                                                                        viewBox="0 0 24 24"
+                                                                                        stroke="currentColor">
+                                                                                        <path stroke-linecap="round"
+                                                                                                stroke-linejoin="round"
+                                                                                                stroke-width="2"
+                                                                                                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                                                                </svg>
+                                                                        </a>
 
+                                                                </div>
                                                         </div>
                                                 </div>
                                         </div>
                                 </div>
 
-
                         </div>
-                        <div class=" col-span-5 lg:col-span-4 border-l-2 -ml-6 pl-6 mr-3 lg:mr-0 border-gray-700">
+                        <div class="sm:my-3 sm:py-20 border-r-2 border-gray-800">
+                        </div>
+                        <div class="   mt-10 sm:mt-0  mx-3  px-4 ">
                                 <div>
                                         <div class="flex justify-center my-auto">
-                                                <img class="h-9 object-cover w-auto sm:h-24"
+                                                <img class="h-14 object-cover w-auto lg:h-24"
                                                         src="./assets/img/TECHRealtors.png" alt="">
                                         </div>
                                         <div class=" flex justify-center mx-auto">
                                                 <div class=" ">
                                                         <p
-                                                                class="text-base sm:text-xl text-center mt-2 font-extralight text-gray-900">
+                                                                class="text-base sm:text-xl text-center mt-2 font-light text-gray-500">
                                                                 Follow by
                                                         </p>
                                                         <p
-                                                                class="text-base sm:text-md  md:text-lg -mx-3 text-center mb-2 font- text-gray-900">
+                                                                class="text-base sm:text-md  md:text-lg -mx-3 text-center mb-2  text-gray-900">
                                                                 Tech Realtors Properties Sdn Bhd (1066954-K）
                                                         </p>
                                                         <div
@@ -1073,12 +1127,12 @@
 
                                                         </div>
                                                         <div
-                                                                class="flex text-center justify-center items-center space-x-6 ">
+                                                                class="flex text-center justify-center items-center  space-x-6 ">
 
 
 
                                                                 <p
-                                                                        class="text-base sm:text-md  md:text-xl  text-center mb-2 font-extralight text-gray-600">
+                                                                        class="text-sm xl:text-md   md:text-xl w-auto sm:w-48 lg:w-96 text-center mb-2 font-light text-gray-600">
                                                                         No 5-1,Jalan Perda Jaya,
                                                                         Kawasan Perniagaan Perda Jaya,
                                                                         14000 Bukit Mertajam,
@@ -1090,73 +1144,18 @@
                         </div>
                 </div>
                 <div
-                        class="hidden sm:flex justify-between items-center px-4 py-2 sm:px-1 md:justify-start md:space-x-10 sm:max-w-xs md:max-w-4xl  xl:max-w-5xl mx-auto border-b-2">
+                        class="flex flex-col sm:flex-row justify-between items-center px-4 py-4 sm:px-1 md:justify-start md:space-x-10 sm:max-w-xs md:max-w-4xl  xl:max-w-5xl mx-auto border-b-2">
                         <div class=" flex items-baseline justify-start flex-1 lg:w-0">
-                                <p class="text-xs  font-light text-gray-900">
+                                <p class=" text-sm sm:text-base  font-extralight text-gray-900">
                                         ©2021 MR. Property. All rights reserved.</p>
                         </div>
                         <div class=" flex items-baseline justify-end flex-1 lg:w-0">
-                                <a href="https://www.antwebstudio.com/" target="_blank" class="text-xs  hover:text-red-800 font-light text-gray-900">
+                                <a href="https://www.antwebstudio.com/" target="_blank"
+                                        class="text-sm sm:text-base  hover:text-red-800 font-extralight text-gray-900">
                                         Website by Ant Web Studio</a>
                         </div>
                 </div>
-                <div
-                class="block sm:hidden  items-center px-4 py-2 sm:px-1  sm:max-w-xs md:max-w-4xl  xl:max-w-5xl mx-auto ">
-                
-                <div class=" flex justify-center mx-auto">
-                        <div class=" ">            
-                                <div    class="flex text-center justify-center items-center space-x-6 my-5">
-                                        <a href="#" class="text-gray-400 hover:text-red-800">
-                                                <span class="sr-only">Facebook</span>
-                                                <svg id="Bold" class="h-10 w-10"
-                                                        fill="currentColor"
-                                                        enable-background="new 0 0 24 24"
-                                                        height="512" viewBox="0 0 24 24"
-                                                        width="512"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path
-                                                                d="m15.997 3.985h2.191v-3.816c-.378-.052-1.678-.169-3.192-.169-3.159 0-5.323 1.987-5.323 5.639v3.361h-3.486v4.266h3.486v10.734h4.274v-10.733h3.345l.531-4.266h-3.877v-2.939c.001-1.233.333-2.077 2.051-2.077z" />
-                                                </svg>
-                                        </a>
-                                        <a href="#" class="text-gray-400 hover:text-gray-500">
-                                                <span class="sr-only">Whatsapp</span>
-                                                <svg class="h-10 w-10" id="Bold"
-                                                        fill="currentColor"
-                                                        enable-background="new 0 0 24 24"
-                                                        height="512" viewBox="0 0 24 24"
-                                                        width="512"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path
-                                                                d="m17.507 14.307-.009.075c-2.199-1.096-2.429-1.242-2.713-.816-.197.295-.771.964-.944 1.162-.175.195-.349.21-.646.075-.3-.15-1.263-.465-2.403-1.485-.888-.795-1.484-1.77-1.66-2.07-.293-.506.32-.578.878-1.634.1-.21.049-.375-.025-.524-.075-.15-.672-1.62-.922-2.206-.24-.584-.487-.51-.672-.51-.576-.05-.997-.042-1.368.344-1.614 1.774-1.207 3.604.174 5.55 2.714 3.552 4.16 4.206 6.804 5.114.714.227 1.365.195 1.88.121.574-.091 1.767-.721 2.016-1.426.255-.705.255-1.29.18-1.425-.074-.135-.27-.21-.57-.345z" />
-                                                        <path
-                                                                d="m20.52 3.449c-7.689-7.433-20.414-2.042-20.419 8.444 0 2.096.549 4.14 1.595 5.945l-1.696 6.162 6.335-1.652c7.905 4.27 17.661-1.4 17.665-10.449 0-3.176-1.24-6.165-3.495-8.411zm1.482 8.417c-.006 7.633-8.385 12.4-15.012 8.504l-.36-.214-3.75.975 1.005-3.645-.239-.375c-4.124-6.565.614-15.145 8.426-15.145 2.654 0 5.145 1.035 7.021 2.91 1.875 1.859 2.909 4.35 2.909 6.99z" />
-                                                </svg>
-                                        </a>
 
-                                        <a href="#" class="text-gray-400 hover:text-gray-500">
-                                                <span class="sr-only">Mail</span>
-                                                <svg xmlns="http://www.w3.org/2000/svg"
-                                                        class="h-12 w-12" fill="none"
-                                                        viewBox="0 0 24 24"
-                                                        stroke="currentColor">
-                                                        <path stroke-linecap="round"
-                                                                stroke-linejoin="round"
-                                                                stroke-width="2"
-                                                                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                                                </svg>
-                                        </a>
-
-                                </div>
-                        </div>
-                </div>
-                <div class="border-t-2 border-gray-400 mb-2"></div>
-                <p class="text-xs mx-auto text-center font-light text-gray-900 ">
-                        ©2021 MR. Property. All rights reserved.</p>
-                        <a href="https://www.antwebstudio.com/" target="_blank" class="text-xs mx-auto text-center hover:text-red-800 font-extralight text-gray-900">
-                                Website by Ant Web Studio</a>
-
- 
-        </div>
 
         </div>
 </footer>
